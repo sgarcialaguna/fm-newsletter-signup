@@ -12,7 +12,10 @@
     --at-apply: bg-gradient-to-r bg-gradient-from-accent bg-gradient-to-primary shadow shadow-accent-2xl
 }
 
-/* Taken from https://www.bram.us/2021/01/28/form-validation-you-want-notfocusinvalid-not-invalid/ */
-input:invalid:not(:placeholder-shown):not(:focus)~.error-message {
+form[data-dirty] input:invalid {
+    --at-apply: bg-error border-color-error text-primary
+}
+
+form[data-dirty] .error-message:has(~input:invalid) {
     display: initial;
 }

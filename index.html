@@ -64,20 +64,18 @@
           </ul>
           <div class="flex flex-wrap gap-2 justify-between text-xs fw-700">
             <label for="email">Email address</label>
+            <span class="error-message hidden text-primary">
+              Valid email required</span>
             <input
               type="email"
               name="email"
               id="email"
               required
               placeholder="email@company.com"
-              class="w-full rounded p-4 mb-4 border-neutral400 text-neutral700 outline-none order-last"
+              class="w-full rounded p-4 mb-4 border-neutral400 text-neutral700 outline-none"
               focus="border-neutral700"
               active="border-neutral700"
-              not-placeholder-shown-not-focus-invalid="bg-error border-color-error text-primary"
             />
-            <span class="error-message hidden text-primary">
-              Valid email required</span
-            >
           </div>
           <button class="button" type="submit">
             Subscribe to monthly newsletter
