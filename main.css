@@ -19,3 +19,7 @@ form[data-dirty] input:invalid {
 form[data-dirty] .error-message:has(~input:invalid) {
     display: initial;
 }
+
+input {
+    border: unset
+}
