@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="./main.js" type="module"></script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <style>
+      /* Wouldn't now how to write this in Tailwind, haha
+         Taken from https://www.bram.us/2021/01/28/form-validation-you-want-notfocusinvalid-not-invalid/
+      */
+      input:invalid:not(:placeholder-shown):not(:focus) ~ .error-message {
+        display: initial;
+      }
+    </style>
+  </head>
+  <body class="font-body text-16px text-neutral700">
+    <main class="grid sm-place-items-center h-screen">
+      <!-- <img src="design/mobile-design.jpg" alt="" class="absolute op-40" /> -->
+      <img
+        src="assets/images/illustration-sign-up-mobile.svg"
+        alt=""
+        width="375"
+      />
+      <div class="px-6 py-8 grid gap-4">
+        <h1 class="text-2.4rem tracking-wide">Stay updated!</h1>
+        <p class="mb-2">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+
+        <ul class="list-none p0 m0 mb-6 grid gap-2">
+          <li class="flex items-start">
+            <img
+              src="assets/images/icon-list.svg"
+              alt=""
+              class="inline-block mr-4"
+            />Product discovery and building what matters
+          </li>
+          <li class="flex items-start">
+            <img
+              src="assets/images/icon-list.svg"
+              alt=""
+              class="inline-block mr-4"
+            />Measuring to ensure updates are a success
+          </li>
+          <li class="flex items-start">
+            <img
+              src="assets/images/icon-list.svg"
+              alt=""
+              class="inline-block mr-4"
+            />And much more!
+          </li>
+        </ul>
+        <form class="grid gap-2">
+          <div class="flex flex-wrap gap-1 justify-between text-xs fw-700">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="email@company.com"
+              class="w-full rounded p-4 mb-4 border-neutral400 text-neutral700 outline-none order-last"
+              focus="border-neutral700"
+              not-placeholder-shown-not-focus-invalid="bg-error border-color-error text-primary"
+            />
+            <span class="error-message hidden text-primary">
+              Valid email required</span
+            >
+          </div>
+          <button
+            type="submit"
+            class="rounded-2 py-4 text-neutral100 bg-neutral700 border-none fw-700 cursor-pointer"
+            hover="bg-gradient-to-r bg-gradient-from-accent bg-gradient-to-primary shadow shadow-accent-2xl"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+
+      <!-- Sign-up form start -->
+
+      <!-- Stay updated! Join 60,000+ product managers receiving monthly updates on:
+      Product discovery and building what matters Measuring to ensure updates
+      are a success And much more! Email address email@company.com Subscribe to
+      monthly newsletter -->
+
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <!-- Thanks for subscribing! A confirmation email has been sent to
+      ash@loremcompany.com. Please open it and click the button inside to
+      confirm your subscription. Dismiss message -->
+
+      <!-- Success message end -->
+    </main>
+  </body>
+</html>

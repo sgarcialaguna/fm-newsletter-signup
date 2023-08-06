@@ -1,0 +1,17 @@
+{
+  "name": "unocss-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@unocss/preset-uno": "^0.54.1",
+    "@unocss/vite": "^0.54.1",
+    "unocss": "^0.54.1",
+    "vite": "^4.4.8"
+  }
+}
