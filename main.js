@@ -8,7 +8,3 @@ document.querySelector("form").addEventListener("submit", (event) => {
     event.target.elements.email.value;
   document.querySelector("dialog").showModal();
 });
-
-document
-  .getElementById("closeDialog")
-  .addEventListener("click", () => document.querySelector("dialog").close());

@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="./assets/images/favicon-32x32.png"
-  />
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="main.css" />
-  <script src="./main.js" type="module"></script>
-  <title>
-    Frontend Mentor | Newsletter sign-up form with success message
-  </title>
-</head>
-<body class="font-body text-16px text-neutral700">
-  <main class="grid sm-place-items-center h-screen un-cloak">
-    <!-- <img src="design/mobile-design.jpg" alt="" class="absolute op-40" /> -->
-    <form>
-      <img
-      src="assets/images/illustration-sign-up-mobile.svg"
-      alt="Sign up"
-      width="375"
-      w-full
-      />
-      <div class="px-6 py-8 grid gap-4">
-        <h1 class="text-2.4rem tracking-wide">Stay updated!</h1>
-        <p class="mb-2">
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        
-        <ul class="list-none p0 m0 grid gap-2 mb-8">
-          <li class="flex items-start">
-            <img
-            src="assets/images/icon-list.svg"
-            alt="list icon"
-            class="inline-block mr-4"
-            />Product discovery and building what matters
-          </li>
-          <li class="flex items-start">
-            <img
-            src="assets/images/icon-list.svg"
-            alt="list icon"
-            class="inline-block mr-4"
-            />Measuring to ensure updates are a success
-          </li>
-          <li class="flex items-start">
-            <img
-            src="assets/images/icon-list.svg"
-            alt="list icon"
-            class="inline-block mr-4"
-            />And much more!
-          </li>
-        </ul>
-        <div class="flex flex-wrap gap-2 justify-between text-xs fw-700">
-          <label for="email">Email address</label>
-          <input
-          type="email"
-          name="email"
-          id="email"
-          required
-          placeholder="email@company.com"
-          class="w-full rounded p-4 mb-4 border-neutral400 text-neutral700 outline-none order-last"
-          focus="border-neutral700"
-          active="border-neutral700"
-          not-placeholder-shown-not-focus-invalid="bg-error border-color-error text-primary"
-          />
-          <span class="error-message hidden text-primary">
-            Valid email required</span
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="./main.js" type="module"></script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body class="font-body text-16px text-neutral700">
+    <main class="grid sm-place-items-center h-screen un-cloak">
+      <!-- <img src="design/mobile-design.jpg" alt="" class="absolute op-40" /> -->
+      <form>
+        <img
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt="Sign up"
+          width="375"
+          w-full
+        />
+        <div class="px-6 py-8 grid gap-4">
+          <h1 class="text-2.4rem tracking-wide">Stay updated!</h1>
+          <p class="mb-2">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <ul class="list-none p0 m0 grid gap-2 mb-8">
+            <li class="flex items-start">
+              <img
+                src="assets/images/icon-list.svg"
+                alt="list icon"
+                class="inline-block mr-4"
+              />Product discovery and building what matters
+            </li>
+            <li class="flex items-start">
+              <img
+                src="assets/images/icon-list.svg"
+                alt="list icon"
+                class="inline-block mr-4"
+              />Measuring to ensure updates are a success
+            </li>
+            <li class="flex items-start">
+              <img
+                src="assets/images/icon-list.svg"
+                alt="list icon"
+                class="inline-block mr-4"
+              />And much more!
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2 justify-between text-xs fw-700">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="email@company.com"
+              class="w-full rounded p-4 mb-4 border-neutral400 text-neutral700 outline-none order-last"
+              focus="border-neutral700"
+              active="border-neutral700"
+              not-placeholder-shown-not-focus-invalid="bg-error border-color-error text-primary"
+            />
+            <span class="error-message hidden text-primary">
+              Valid email required</span
             >
           </div>
           <button class="button" type="submit">
@@ -78,33 +78,47 @@
           </button>
         </div>
       </form>
-      
-      <dialog class="backdrop:bg-neutral700 text-neutral700 w-screen h-screen open:flex flex-col px-6 py-8 gap-6">
-        <img src="./assets/images/icon-list.svg" width="60" alt="Success" class="text-2.4rem mt-7.5rem"></img>
-        <h1 class="text-2.4rem tracking-wide leading-none">Thanks for subscribing!</h1>
-        <p>A confirmation email has been sent to <strong id="email-confirmation"></strong>. Please open it and click the button inside to confirm your subscription.</p>
-        <button class="button" type="button" id="closeDialog" class="mt-a">Dismiss message</button>
+
+      <dialog
+        class="backdrop:bg-neutral700 text-neutral700 w-screen h-screen open:flex flex-col px-6 py-8 gap-6"
+      >
+        <form method="dialog" class="display-contents">
+          <img
+            src="./assets/images/icon-list.svg"
+            width="60"
+            alt="Success"
+            class="text-2.4rem mt-7.5rem"
+          />
+          <h1 class="text-2.4rem tracking-wide leading-none">
+            Thanks for subscribing!
+          </h1>
+          <p>
+            A confirmation email has been sent to
+            <strong id="email-confirmation"></strong>. Please open it and click
+            the button inside to confirm your subscription.
+          </p>
+          <button class="button mt-a" type="submit" id="closeDialog">
+            Dismiss message
+          </button>
+        </form>
       </dialog>
-      
-      
-      
+
       <!-- Sign-up form start -->
-      
+
       <!-- Stay updated! Join 60,000+ product managers receiving monthly updates on:
-        Product discovery and building what matters Measuring to ensure updates
-        are a success And much more! Email address email@company.com Subscribe to
-        monthly newsletter -->
-        
-        <!-- Sign-up form end -->
-        
-        <!-- Success message start -->
-        
-        <!-- Thanks for subscribing! A confirmation email has been sent to
-          ash@loremcompany.com. Please open it and click the button inside to
-          confirm your subscription. Dismiss message -->
-          
-          <!-- Success message end -->
-        </main>
-      </body>
-      </html>
-      
+            Product discovery and building what matters Measuring to ensure updates
+            are a success And much more! Email address email@company.com Subscribe to
+            monthly newsletter -->
+
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <!-- Thanks for subscribing! A confirmation email has been sent to
+                ash@loremcompany.com. Please open it and click the button inside to
+                confirm your subscription. Dismiss message -->
+
+      <!-- Success message end -->
+    </main>
+  </body>
+</html>
