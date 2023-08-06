@@ -20,14 +20,20 @@
   <body class="font-body text-16px text-neutral700">
     <main class="grid sm-place-items-center h-screen un-cloak">
       <!-- <img src="design/mobile-design.jpg" alt="" class="absolute op-40" /> -->
-      <form>
-        <img
-          src="assets/images/illustration-sign-up-mobile.svg"
-          alt="Sign up"
-          width="375"
-          w-full
-        />
-        <div class="px-6 py-8 grid gap-4">
+      <form sm-flex>
+        <picture>
+          <source
+            srcset="assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 640px)">
+          </source>
+            <img
+            src="assets/images/illustration-sign-up-mobile.svg"
+            alt="Sign up"
+            width="375"
+            w-full
+          />
+        </picture>
+        <div class="px-6 py-8 grid gap-4 sm-content-center sm-order-first">
           <h1 class="text-2.4rem tracking-wide">Stay updated!</h1>
           <p class="mb-2">
             Join 60,000+ product managers receiving monthly updates on:
@@ -80,14 +86,14 @@
       </form>
 
       <dialog
-        class="backdrop:bg-neutral700 text-neutral700 w-screen h-screen open:flex flex-col px-6 py-8 gap-6"
+        class="backdrop:bg-neutral700 text-neutral700 w-screen h-screen sm-w-min sm-h-fit min-w-md open:flex flex-col px-6 py-8 sm-p-12 gap-6 sm-rounded-8"
       >
         <form method="dialog" class="display-contents">
           <img
             src="./assets/images/icon-list.svg"
             width="60"
             alt="Success"
-            class="text-2.4rem mt-7.5rem"
+            class="text-2.4rem mt-7.5rem sm-mt-0"
           />
           <h1 class="text-2.4rem tracking-wide leading-none">
             Thanks for subscribing!
